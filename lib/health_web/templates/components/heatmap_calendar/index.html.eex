@@ -1,0 +1,1 @@
+<%= parse_data_render_html(@data, @conn) %>

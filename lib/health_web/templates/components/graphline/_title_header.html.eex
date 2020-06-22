@@ -1,0 +1,8 @@
+<div class=" w-100 flex bb b--light-gray mb4">
+    <div class="ma2 flex-auto">
+    <h3><%= location_label(@data) %></h3>
+    </div>
+    <div class="ma2  flex-auto tr pr2">
+        <p class="lh-copy">&nbsp;</p>
+    </div>
+</div>

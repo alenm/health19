@@ -1,0 +1,5 @@
+<div class="hk-well mt4">
+  <img src="images/logo.svg" width="80" class="mv5">
+  <div class="f1 mb2 lh-title b">Health 19</div>
+  <div class="f5 mw7 center lh-copy">This website takes the data from <a href="https://github.com/CSSEGISandData/COVID-19" title="Language" class="f6 dib mid-gray dim">Johns Hopkins University Github Repo</a> <br> and presents the last 14 days of data organized by continent<br><br><a href="/regions" class="link hk-link blue">Select a region of the world</a></div>
+</div>

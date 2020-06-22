@@ -1,0 +1,17 @@
+<div class="my-legend fr">
+<div class="fl mr3 f7" style="font-size:10px;">New Cases</div>
+<div class="legend-scale fl">
+  <ul class="legend-labels">
+  <%= for {label, color} <- render_legend() do %>
+    <li style="font-size:9px;"><span style="background:<%= color %>"></span><span class="pt1"><%= label %></span></li>
+  <% end %>
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
+

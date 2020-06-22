@@ -1,0 +1,35 @@
+<!-- START This should only appear once -->
+<%= render "_scripts.html" %>
+<!-- END --->
+
+<%= for list_of_graph_views <- render_results(@data) do %>
+
+<div class="w-100 flex fade-in mt6">
+<%= for graph <- list_of_graph_views do %>
+<div class="ma2 flex-1 pa1 pl2 bg-gradient-gauge pb3 pt3">
+<h1 class="f5 lh-title mt0 mb1 dark-gray">Past <%= graph.days_ago %> days </h1>
+<h1 class="f3 lh-title mr3 mt0 pt0">
+<%= graph.title %> <span class="fr">&nbsp;&nbsp;<%= graph.delta_count %></span></h1>
+    <svg class="<%= graph.html_assets.css_class_var_name %>" width="350" height="50" stroke-width="2" stroke="<%= graph.color_scheme.stroke %>" fill="<%= graph.color_scheme.fill %>"></svg>
+    <span class="tooltip pt1 fl fade-in" hidden="true"></span>
+  <br><br><br>
+</div>
+
+<script>
+<!---START ------>
+var <%= graph.html_assets.js_var_name %> = <%= graph.js_details %>
+<%= graph.html_assets.spark_line_selector %>
+<!---END ------>
+</script>
+<% end %>
+</div>
+
+<% end %>
+
+
+
+
+
+
+
+

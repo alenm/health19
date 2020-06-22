@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script>
+    // Get the text field that we're going to track
+    let field = document.getElementById("my_table");
+
+    document.getElementById("my_btn").addEventListener("click", function() {
+
+        let table = "table"
+        let list = "list"
+
+        Cookies.remove('viewing_pref')
+
+        if (table == field.dataset.userView) {
+            Cookies.set('viewing_pref', list)
+        } else {
+            Cookies.set('viewing_pref', table)
+        }
+
+    });
+</script>

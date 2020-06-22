@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Health19 – <%= @view_module.title(@view_template, assigns) %></title>
+    <link rel='stylesheet' href='https://www.herokucdn.com/purple3/latest/purple3.min.css'>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script src="https://cdn.rawgit.com/fnando/sparkline/master/dist/sparkline.js"></script>
+  </head>
+  <body>
+
+
+
+
+<%= HealthWeb.RegionsNavigationView.main_navigation(@conn) %>
+
+
+
+<br><br><br>
+ <main class="center mw9 ph3-ns">
+  <div class="cf ph2-ns">
+    <div class="fl w-100 pa2">
+      <div class=" bg-white pv4">
+        <%= if info = get_flash(@conn, :info) do %>
+            <p class="flex items-center hk-message--warning"  role="alert"><%= info %></p>
+        <% end %>
+        <%= if error = get_flash(@conn, :error) do %>
+          <p class="flex items-center hk-message--success" role="alert"><%= error %></p>
+        <% end %>
+      <%= render @view_module, @view_template, assigns %>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pv4 ph3 ph5-m ph6-l mid-gray mt6">
+  <div class="tc mt3">
+    This is an independent website, and not affiliated with the Johns Hopkins University. All data comes from this <a href="https://github.com/CSSEGISandData/COVID-19" title="Github Repo" class="f6 dib mid-gray dim">Johns Hopkins University Github Repo</a>. <br><br>
+    This website comes from this <a href="#" title="Github Repo" class="f6 dib mid-gray dim">Github Repo</a>.
+  </div>
+</footer>
+
+
+    <%= csrf_meta_tag() %>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

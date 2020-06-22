@@ -1,0 +1,15 @@
+<div class="w-100 flex bb b--light-gray mt4 pb2">
+<h1 class="f4 gray mv0 pl2">14 Day Summary</h1>
+</div>
+<%= render HealthWeb.Components.GraphlineView, "graph_line.html", data: @data, conn: HealthWeb.Endpoint.struct_url %>
+<%= HealthWeb.RegionsBreadcrumbView.breadcrumb(@data, @conn) %>
+<%= live_render(@conn, LiveFooWeb.TableViewLive, session: %{"data" => @data, "type_of_view" => @type_of_view, "duration" => @duration}) %>
+<%= render "_script.html" %>
+
+
+
+
+
+
+
+

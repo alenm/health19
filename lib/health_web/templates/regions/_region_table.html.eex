@@ -1,0 +1,1 @@
+<%= render HealthWeb.Components.HeatmapCalendarView, "index.html", data: @data, conn: HealthWeb.Endpoint.struct_url %>

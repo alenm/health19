@@ -1,0 +1,28 @@
+<div class="w-100 flex flex-auto bb bb b--silver mt6 fade-in" id="my_table" data-user-view="list">
+  <div class="h2 w2 mr1 ml1 bg-white flex-3 pa1 b">Prov/State</div>
+  <div class="h2 w2 flex-2 pa1 b">City</div>
+  <div class="h2 w2 bg-lightest-silver flex-1 pa1 b">Total Cases</div>
+  <div class="h2 w2 mr1 bg-lightest-silver flex-1 pa1 b">Total Death</div>
+  <div class="h2 w2 mr1 bg-white flex-4 pa1 b">New Cases <%= duration_label(@duration) %></div>
+  <div class="h2 w2 flex-2 pa1 b">Special Note</div>
+</div>
+<%= for row <- @data do %>
+<div class="w-100 flex flex-auto bb bb b--silver fade-in">
+  <div class="h2 w2 mr1 ml1 bg-white flex-3 pa1"><%= link row.location.label_prov_state, to: Routes.regions_path(HealthWeb.Endpoint.struct_url, :show, row.location.continent_iso_code, String.downcase(row.location.iso_code)), title: "See breakdown", class: "dark-gray no link dim b black" %></div>
+  <div class="h2 w2 flex-2 pa1"><%= row.location.label_city %></div>
+  <div class="h2 w2 bg-lightest-silver flex-1 pa1"><%= row.latest_report_sum.confirmed |> Formatter.format_number() %></div>
+  <div class="h2 w2 mr1 bg-lightest-silver flex-1 pa1"><%= row.latest_report_sum.death |> Formatter.format_number() %></div>
+  <div class="h2 w2 mr1 bg-white flex-4 pa1"><%= render HealthWeb.Components.HeatmapTimelineView, "timeline.html", data: row %></div>
+  <div class="h2 w2 flex-2 pa1 gray"><%= row.location.special_note %></div>
+</div>
+<% end %>
+<%= for total <- get_total_table_count(@data) do %>
+<div class="w-100 flex flex-auto mt1 pt1 fade-in">
+  <div class="h2 w2 mr1 ml1 bg-white flex-3 pa1 b">TOTAL</div>
+  <div class="h2 w2 flex-2 pa1 b">&nbsp;</div>
+  <div class="h2 w2 flex-1 pa1 b"><%= total.confirmed %></div>
+  <div class="h2 w2 mr1 flex-1 pa1 b"><%= total.death %></div>
+  <div class="h2 w2 mr1 bg-white flex-4 pa1 b">&nbsp;</div>
+  <div class="h2 w2 flex-2 pa1 b">&nbsp;</div>
+</div>
+<% end %>

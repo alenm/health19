@@ -1,0 +1,167 @@
+th {
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.hk-tabs__tab--active {
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom-width: 5px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    width: 5%;
+}
+
+.bg-gradient-extra-light-gray {
+    background: linear-gradient(to bottom right, #f8f9fb, #fbfcfd);
+}
+
+.bg-gradient-gauge {
+    background: linear-gradient(#f7f9fb, #ffffff 67.23%)
+}
+
+.slide-top {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.fade-in {
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+    -moz-animation: fadeIn ease 0.5s;
+    -o-animation: fadeIn ease 0.5s;
+    -ms-animation: fadeIn ease 0.5s;
+}
+
+.bg-lightest-purple {
+    background-color: #f2f0f7;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* graph colors */
+
+.confirmed--sparkline {
+    fill: rgba(red, .3);
+}
+
+.chart div {
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+}
+
+
+/* Start Tabs */
+
+.rk-tabs__tab {
+    text-decoration: none;
+    padding: 15px;
+    color: #62738d;
+    border-left-color: #e3e7ef;
+    border-right-color: #e3e7ef;
+    border-top-color: #e3e7ef;
+}
+
+.rk-tabs__tab--active {
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom-width: 5px;
+}
+
+
+/* legend */
+
+.my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+
+.my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+}
+
+.my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 8px;
+    width: 50px;
+}
+
+.my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+}
+
+.my-legend a {
+    color: #777;
+}

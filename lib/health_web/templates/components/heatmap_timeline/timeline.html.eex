@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="12" xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+<%= for square <- render_time_line_squares(@data) do %>
+
+    <rect x="<%= square.x %>" y="<%= square.y %>" height="<%= square.height %>" width="<%= square.width %>" style="<%= square.style %>" aria-label="<%= square.count %>" />
+
+<% end %>
+</svg> 
+
