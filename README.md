@@ -37,7 +37,7 @@ Once that is completed and you have the database setup. You can run the followin
 
 `mix health.seeder`
 
-This task will take the data from `priv/repo/seed_data.sql` and import it into your database. If everything works out you should have the latest data as of Jun 19, 2020. I will make updates once in awhile with the latest data so then all you have to do is run this task.
+This task will take the data from `priv/repo/seed_data.sql` and import it into your database. If everything works out you should have the latest data as of July 5, 2020. I will make updates once in awhile with the latest data so then all you have to do is run this task.
 
 ## Details About App
 * Flag icons are from [FamFam](http://www.famfamfam.com/lab/icons/flags/)
