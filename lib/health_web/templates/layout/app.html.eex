@@ -7,7 +7,7 @@
     <title>Health19 – <%= @view_module.title(@view_template, assigns) %></title>
     <link rel='stylesheet' href='https://www.herokucdn.com/purple3/latest/purple3.min.css'>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-    <script src="https://cdn.rawgit.com/fnando/sparkline/master/dist/sparkline.js"></script>
+    <script src="https://cdn.rawgit.com/fnando/sparkline/main/dist/sparkline.js"></script>
   </head>
   <body>
 
